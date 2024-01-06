@@ -1,2 +1,2 @@
-Visit [ecomprajwal.netlify.app]https://ecomprajwal.netlify.app/cart)
+Visit [ecomprajwal.netlify.app]https://ecomprajwal.netlify.app/)
 and have a look.
