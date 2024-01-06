@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { useFirebase } from "./context/Firebase";
+import { useFirebase } from "../context/Firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 

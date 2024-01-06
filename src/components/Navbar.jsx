@@ -51,7 +51,7 @@ export default function Navbar() {
             </svg>
           </button>
         ) : null}
-        <button className="p-2 m-2">
+        <button className="p-2 m-2" onClick={() => navigate("/cart")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

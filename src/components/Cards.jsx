@@ -11,12 +11,19 @@ export default function Cards(props){
         firebase.getImageURL(props.imageURL).then((url)=>setURL(url))
     },[])
     const handleClick = ()=>{
+        console.log(props)
         navigate(`products/${props.name}`,{state:{product: props , imgUrl : url}})
     }
+    const handleCart = async ()=>{
+
+        await firebase.handleCreateNewCart(props)
+    }
+    
+
     return (
-        <div onClick={handleClick} className="w-72 m-10 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:z-0 hover:shadow-xl">
+        <div  className="w-72 m-10 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:z-0 hover:shadow-xl">
         
-            <img src={url}
+            <img onClick={handleClick} src={url}
                     alt="Product" className="h-80 w-72 object-cover rounded-t-xl" />
             <div className="px-4 py-3 w-72">
                 <span className="text-gray-400 mr-3 uppercase text-xs">Brand</span>
@@ -26,7 +33,7 @@ export default function Cards(props){
                     {/* <del>
                         <p className="text-sm text-gray-600 cursor-auto ml-2">$199</p>
                     </del> */}
-                    <div className="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    <div onClick={handleCart} className="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fillRule="currentColor" className="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fillRule="evenodd"
                                 d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z" />

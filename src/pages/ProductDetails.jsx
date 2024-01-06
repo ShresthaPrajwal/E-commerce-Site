@@ -1,6 +1,7 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 import { useLocation } from "react-router-dom";
+import Footer from "../components/Footer";
 export default function ProductDetail() {
 
     const {state} = useLocation();
@@ -66,6 +67,7 @@ export default function ProductDetail() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

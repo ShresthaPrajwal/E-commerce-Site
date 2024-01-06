@@ -1,7 +1,7 @@
 import React from "react";
-import { useFirebase } from "./context/Firebase";
+import { useFirebase } from "../context/Firebase";
 import { doc, setDoc } from "firebase/firestore";
-import Navbar from "./components/Navbar";
+import Navbar from "../components/Navbar";
 export default function AddProductPage() {
   const [title, setTitle] = React.useState("");
   const [price, setPrice] = React.useState("");
@@ -82,7 +82,9 @@ export default function AddProductPage() {
           </button>
         </form>
       </div>
-    </div></>
+    </div>
+    
+    </>
     
   );
 }

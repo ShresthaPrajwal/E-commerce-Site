@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useFirebase } from "./context/Firebase";
+import { useFirebase } from "../context/Firebase";
 
 export default function SignUpPage(){
     const [formData, setFormData] = useState({

@@ -1,11 +1,11 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import About from "./components/About";
+import Navbar from "../components/Navbar";
+import About from "../components/About";
 import { useState ,useMemo } from "react";
 import { useEffect } from "react";
-import { useFirebase } from "./context/Firebase";
-import Cards from "./components/Cards";
-import Footer from "./components/Footer";
+import { useFirebase } from "../context/Firebase";
+import Cards from "../components/Cards";
+import Footer from "../components/Footer";
 export default function HomePage() {
   const firebase = useFirebase();
   const [products, setProducts] = useState([]);
